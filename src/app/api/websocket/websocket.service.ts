@@ -21,7 +21,7 @@ export class WebsocketService {
   private reconnection$: Observable<number> | null = null;
 
   private config = {
-    url: 'wss://www.bitmex.com/realtime?subscribe=tradeBin1m',
+    url: 'wss://www.bitmex.com/realtime?subscribe=tradeBin1m', // docs: https://www.bitmex.com/app/wsAPI#Subscriptions
     closeObserver: {
       next: (event: CloseEvent) => {
         this.socket$ = null;
